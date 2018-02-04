@@ -3,6 +3,8 @@ package patelheggere.trainsearch.acivity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -57,6 +59,15 @@ public class FaceBookLoginActivity extends AppCompatActivity {
             Intent mainIntent = new Intent(getApplicationContext(), OptionSelectionActivity.class);
             startActivity(mainIntent);
         }
+
+        Button mDirectLogin = findViewById(R.id.btn_direct_login);
+        mDirectLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainIntent = new Intent(getApplicationContext(), OptionSelectionActivity.class);
+                startActivity(mainIntent);
+            }
+        });
     }
 
     @Override
